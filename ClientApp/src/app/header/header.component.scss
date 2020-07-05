@@ -1,0 +1,19 @@
+@import '../../stylehelper/boxhelper';
+
+:host{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #0174A9;
+  height: 10%;
+  border-bottom: 2px solid #0174A9;
+  width: 100%;
+
+  h1{
+    color: #FF9900;
+    font-weight: bold;
+    font-size: 1.9em;
+  }
+
+
+}

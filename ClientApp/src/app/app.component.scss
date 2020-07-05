@@ -1,0 +1,49 @@
+@import '../stylehelper/elementFormatter.scss';
+
+:host{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+
+  h2{
+    margin-left: 5%;
+    margin-right: 5%;
+    text-align: center;
+    margin-top: 5%;
+  }
+
+  main{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+  }
+
+  video{
+    width: 98%;
+    height: 35%;
+  }
+
+  button{
+    background: linear-gradient(#FF9900, #F59300);
+    color: #E8E9EB;
+    height: 10%;
+    font-size: 1.5em;
+    width: 90%;
+    border-radius: 5px;
+    border: 2px solid #F59300;
+    margin-top: 20%;
+  }
+
+  span{
+    text-decoration: underline;
+  }
+
+
+
+}
