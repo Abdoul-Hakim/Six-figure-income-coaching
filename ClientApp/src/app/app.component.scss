@@ -30,18 +30,23 @@
   }
 
   button{
-    background: linear-gradient(#FF9900, #F59300);
+    //background: linear-gradient(#FF9900, #F59300);
+    background-color: #20B8FE;
     color: #E8E9EB;
     height: 10%;
     font-size: 1.5em;
     width: 90%;
     border-radius: 5px;
-    border: 2px solid #F59300;
+    border: 2px solid #20B8FE;
     margin-top: 20%;
   }
 
   span{
     text-decoration: underline;
+  }
+
+  button:active{
+    border-color: white
   }
 
 
