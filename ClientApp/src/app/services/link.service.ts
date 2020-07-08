@@ -6,7 +6,7 @@ import { BehaviorSubject } from 'rxjs';
 })
 export class LinkService {
 
-  currentLink: BehaviorSubject<string> = new BehaviorSubject('https://www.google.com');
+  currentLink: BehaviorSubject<string> = new BehaviorSubject('https://www.digistore24.com/redir/300124/Prithvik/');
 
   constructor() { }
 

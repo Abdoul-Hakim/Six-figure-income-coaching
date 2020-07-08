@@ -1,13 +1,23 @@
-<h1>Get your <span>FREE COPY</span> of this online income method</h1>
+<ng-container *ngIf="confirmation === false; else elseBlock">
+  <h1>Get your <span>FREE COPY</span> of this online income method</h1>
+</ng-container>
+<ng-template #elseBlock>
+  <h1><span>THANK YOU</span> for downloading this document</h1>
+  <p>You will get your email in few seconds</p>
+</ng-template>
+
 <picture>
   <img src="../../assets/images/image.png" alt="Find out how this guy makes 1,000,000+ while travelling the world"/>
 
 </picture>
-<form >
+<form formGroup="contactForm">
   <mat-form-field>
     <mat-label>Write your Email</mat-label>
-    <input matInput placeholder="youremail@example.com"  type="email" ngModel email>
+    <input [errorStateMatcher]="emailError" (change)="inputChange($event)"  formControlName="userEmail" matInput placeholder="youremail@example.com"  type="email" ngModel email required>
   </mat-form-field>
+  <mat-error *ngIf="emailError">
+    please enter a valid email address
+  </mat-error>
 
-  <button mat-raised-button color="primary" (click)="checker()"><a [href]="link">Start getting rich</a></button>
+  <button type="button" mat-raised-button color="primary" (click)="confirm()">Start getting rich</button>
 </form>

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
-import { LinkService } from '../link.service';
+import { LinkService } from '../services/link.service';
+import { ModalService } from '../services/modal.service';
+import { FormControl, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-modal',
@@ -9,18 +10,41 @@ import { LinkService } from '../link.service';
 })
 export class ModalComponent implements OnInit {
 
-  link = '';
+
+  private text;
+  contactForm = new FormGroup({
+    userEmail: new FormControl('')
+  });
+  confirmation = false;
+  confirmed = true;
+  emailError = false;
+
 
   constructor(
-    private linkProvider: LinkService
+    private modalStateProvider: ModalService
   ) { }
 
   ngOnInit(): void {
-    this.linkProvider.currentLink.subscribe(link => this.link = link);
+    const form = this.contactForm.getRawValue();
+    console.log(form.userEmail);
+
   }
 
-  checker(){
 
+  confirm(){
+    const pattern = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    if (this.text.match(pattern) !== null){
+      this.confirmation = true;
+      setTimeout(() => {
+        this.modalStateProvider.updateModalState(false);
+      }, 3000);
+    } else {
+      this.emailError = true;
+    }
+  }
+
+  inputChange(e: any): void{
+    this.text = e.target.value;
   }
 
 }
