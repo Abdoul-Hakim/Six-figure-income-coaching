@@ -6,6 +6,7 @@
     "start": "ng serve",
     "build": "ng build",
     "prod":"ng build --prod",
+    "github_prod":"ng build --prod --output-path docs --base-href /Six-figures-income-coaching/",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
