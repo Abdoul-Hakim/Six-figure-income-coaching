@@ -1,0 +1,19 @@
+{
+  "name": "six-figure-income-coaching",
+  "version": "1.0.0",
+  "description": "six-figure-income-coaching landing page",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Abdoul-Hakim/Six-figure-income-coaching.git"
+  },
+  "author": "Abdoul Hakim Billa",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Abdoul-Hakim/Six-figure-income-coaching/issues"
+  },
+  "homepage": "https://github.com/Abdoul-Hakim/Six-figure-income-coaching#readme"
+}
