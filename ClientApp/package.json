@@ -5,8 +5,8 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "prod":"ng build --prod",
-    "github_prod":"ng build --prod --output-path docs --base-href /Six-figures-income-coaching/",
+    "prod": "ng build --prod",
+    "github_prod": "ng build --prod --output-path docs --base-href /Six-figures-income-coaching/",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
@@ -25,6 +25,7 @@
     "@angular/platform-browser-dynamic": "~9.1.4",
     "@angular/router": "~9.1.4",
     "rxjs": "~6.5.4",
+    "smtp-client": "^0.3.1",
     "tslib": "^1.10.0",
     "zone.js": "~0.10.2"
   },

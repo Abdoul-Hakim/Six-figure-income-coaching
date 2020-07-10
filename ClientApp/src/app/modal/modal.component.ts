@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { LinkService } from '../services/link.service';
 import { ModalService } from '../services/modal.service';
 import { FormControl, FormGroup } from '@angular/forms';
+import { SmtpService } from '../services/smtp.service';
 
 @Component({
   selector: 'app-modal',
@@ -23,13 +24,11 @@ export class ModalComponent implements OnInit {
 
 
   constructor(
-    private modalStateProvider: ModalService
+    private modalStateProvider: ModalService,
+    private smtpProvider: SmtpService
   ) { }
 
   ngOnInit(): void {
-    const form = this.contactForm.getRawValue();
-    console.log(form.userEmail);
-
   }
 
 
@@ -37,6 +36,7 @@ export class ModalComponent implements OnInit {
     const pattern = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     if (this.text.match(pattern) !== null){
       this.confirmation = true;
+      this.smtpProvider.connect(this.text);
       setTimeout(() => {
         this.modalStateProvider.updateModalState(false);
       }, 3000);
