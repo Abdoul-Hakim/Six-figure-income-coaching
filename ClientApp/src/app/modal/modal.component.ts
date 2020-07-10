@@ -12,9 +12,11 @@ export class ModalComponent implements OnInit {
 
 
   private text;
+
   contactForm = new FormGroup({
     userEmail: new FormControl('')
   });
+
   confirmation = false;
   confirmed = true;
   emailError = false;
