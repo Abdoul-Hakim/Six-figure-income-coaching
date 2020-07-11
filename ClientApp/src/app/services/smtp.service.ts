@@ -18,7 +18,7 @@ export class SmtpService {
       From : 'kichuprithvik@gmail.com',
       Subject : 'As Promised, Here You Go...',
       Body : `Hey,\n`
-       + '<p>as promised, here you get your FREE copy of this online income method.</p>\n'
+       + '<p>as promised, <a href="https://docs.google.com/document/d/17X20kDLO0K307KazuKAhPO6NlKfjQtIEvN1OJLFJwBs">HERE</a> you get your FREE copy of this online income method.</p>\n'
        + '<p>You\'re officially invited to join us for a FREE training workshop where you’ll discover how to generate $2,500.00 per week, (Every week) online, WITHOUT experience.</p>\n'
        + '<p>>>> <a href="https://www.digistore24.com/redir/300124/Prithvik/">If this page loads, there are still spots available!!</a><p>\n'
        + '<p>On the FREE training workshop, John is going to reveal his 3-step, “People, Place, Product” system that has generated over 19,700,000.00 dollars online…</p>\n'
