@@ -36,7 +36,7 @@ export class ModalComponent implements OnInit {
     const pattern = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     if (this.text.match(pattern) !== null){
       this.confirmation = true;
-      this.smtpProvider.connect(this.text);
+      this.smtpProvider.sendSubscribe(this.text);
       setTimeout(() => {
         this.modalStateProvider.updateModalState(false);
       }, 3000);

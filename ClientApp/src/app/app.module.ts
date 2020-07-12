@@ -9,12 +9,16 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeaderComponent } from './header/header.component';
 import { ModalComponent } from './modal/modal.component';
+import { UnsubscribeComponent } from './unsubscribe/unsubscribe.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    ModalComponent
+    ModalComponent,
+    UnsubscribeComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

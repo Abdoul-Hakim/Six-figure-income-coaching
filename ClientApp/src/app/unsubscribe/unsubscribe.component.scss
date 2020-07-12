@@ -1,0 +1,43 @@
+:host{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 5%;
+
+  h1{
+    text-align: center;
+  }
+
+  p{
+    font-size: 1.3em;
+  }
+
+  .container{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 100%;
+  }
+
+  button{
+    background-color: #20B8FE;
+    color: #E8E9EB;
+    height: 10%;
+    font-size: 1.5em;
+    border-radius: 5px;
+    border: 2px solid #20B8FE;
+    margin-top: 2%;
+    width: 80%;
+    height: 100%;
+    display: flex;
+    justify-self: center;
+    align-self: center;
+    justify-content: center;
+    align-items: center;
+  }
+
+  button:active{
+    border-color: #E8E9EB;
+  }
+}

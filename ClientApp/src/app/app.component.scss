@@ -12,15 +12,6 @@
     grid-column: 1;
   }
 
-  h2{
-    margin-left: 5%;
-    margin-right: 5%;
-    text-align: center;
-    margin-top: 5%;
-    font-size: 1.8em;
-
-  }
-
   main{
     display: flex;
     justify-content: flex-start;
@@ -37,26 +28,6 @@
     height: 35%;
   }
 
-  button{
-    //background: linear-gradient(#FF9900, #F59300);
-    background-color: #20B8FE;
-    color: #E8E9EB;
-    height: 10%;
-    font-size: 1.5em;
-    width: 90%;
-    border-radius: 5px;
-    border: 2px solid #20B8FE;
-    margin-top: 2%;
-  }
-
-  span{
-    text-decoration: underline;
-  }
-
-  button:active{
-    border-color: white
-  }
-
   footer{
     background-color: #0174A9;
     color: #20B8FE;
@@ -68,61 +39,4 @@
     grid-row: 3;
     grid-column: 1;
   }
-
-  @media only screen and (max-width: 450px) {
-
-    button{
-      margin-top: 10%;
-    }
-  }
-
-  @media only screen and (min-width: 700px) {
-    video{
-      max-width: 65%;
-      height: 33%;
-    }
-    button{
-      max-width: 50%;
-      margin-top: 2.5%;
-    }
-  }
-
-  @media only screen and (min-width: 1000px) and (orientation:landscape) {
-    video{
-      max-width: 46%;
-      height: 50%;
-    }
-    button{
-      max-width: 50%;
-    }
-  }
-
-  @media only screen and (min-width: 1000px) and (orientation:portrait) {
-    video{
-      max-width: 65%;
-      height: 30%;
-    }
-    button{
-      max-width: 50%;
-    }
-    h2{
-      margin-bottom: 2.5%;
-    }
-  }
-
-  @media screen and (min-width: 1300px){
-    video{
-      max-width: 46%;
-      height: 50%;
-    }
-
-    button{
-      max-width: 40%;
-    }
-    h2{
-      margin-top:2.5%;
-      margin-bottom: 1%;
-    }
-  }
-
 }
