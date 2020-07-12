@@ -11,12 +11,13 @@
 
   p{
     font-size: 1.3em;
+    text-align: center;
   }
 
   .container{
     width: 100%;
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: repeat(auto-fill, minmax(50%, 50%));
     grid-template-rows: 100%;
   }
 
@@ -38,6 +39,26 @@
   }
 
   button:active{
-    border-color: #E8E9EB;
+    border-color: white;
+    outline: none;
+  }
+
+  button:focus{
+    border-color: white;
+    outline: none;
+  }
+
+  input{
+    width: 100%;
+  }
+
+  mat-form-field{
+    width: 100%;
+  }
+
+  .container-single{
+    width: 100%;
+    display: flex;
+    justify-content: center;
   }
 }

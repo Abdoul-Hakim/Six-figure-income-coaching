@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-unsubscribe',
@@ -7,9 +8,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UnsubscribeComponent implements OnInit {
 
-  constructor() { }
+  response = true;
+  confirmation = false;
+
+  constructor(
+    private router: Router
+  ) { }
 
   ngOnInit(): void {
+  }
+
+  unsubscription(answer: boolean){
+    if (answer){
+      this.response = false;
+    } else {
+      this.router.navigate(['/home']);
+    }
+  }
+
+  confirm(answer: boolean){
+    this.confirmation = answer;
   }
 
 }
