@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { SmtpService } from '../services/smtp.service';
 
 @Component({
   selector: 'app-unsubscribe',
@@ -8,11 +9,15 @@ import { Router } from '@angular/router';
 })
 export class UnsubscribeComponent implements OnInit {
 
+  private text;
+  confirmed = true;
+  emailError = false;
   response = true;
   confirmation = false;
 
   constructor(
-    private router: Router
+    private router: Router,
+    private smtpProvider: SmtpService
   ) { }
 
   ngOnInit(): void {
@@ -27,7 +32,18 @@ export class UnsubscribeComponent implements OnInit {
   }
 
   confirm(answer: boolean){
-    this.confirmation = answer;
+    const pattern = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    if (this.text.match(pattern) !== null){
+      this.confirmation = answer;
+      this.confirmation = true;
+      this.smtpProvider.sendUnsubscribe(this.text);
+    } else {
+      this.emailError = true;
+    }
+  }
+
+  inputChange(e: any): void{
+    this.text = e.target.value;
   }
 
 }

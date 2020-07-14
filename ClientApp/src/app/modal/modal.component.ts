@@ -38,7 +38,7 @@ export class ModalComponent implements OnInit {
       this.smtpProvider.sendSubscribe(this.text);
       setTimeout(() => {
         this.modalStateProvider.updateModalState(false);
-      }, 3000);
+      }, 2500);
     } else {
       this.emailError = true;
     }

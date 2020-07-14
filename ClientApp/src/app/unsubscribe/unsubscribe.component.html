@@ -6,23 +6,25 @@
     <button type="button" mat-raised-button color="primary" (click)="unsubscription(false)">No</button>
   </div>
 </ng-template>
-<ng-template #elseBlock >
-  <h1><b>Enter your email to confirm</b></h1>
-  <mat-form-field>
-    <mat-label>Write your Email</mat-label>
-    <input [errorStateMatcher]="emailError" (change)="inputChange($event)"  formControlName="userEmail" matInput placeholder="youremail@example.com"  type="email" ngModel email required>
-  </mat-form-field>
-  <mat-error *ngIf="emailError">
-    please enter a valid email address
-  </mat-error>
+<ng-template #elseBlock>
+  <ng-template [ngIf]="confirmation === true" [ngIfElse]="noConfirmation">
+    <h1><b>Good Bye!</b></h1>
+    <p>Your unsubscription has been confirmed</p>
+  </ng-template>
+  <ng-template #noConfirmation>
+    <h1><b>Enter your email to confirm</b></h1>
+    <mat-form-field>
+      <mat-label>Write your Email</mat-label>
+      <input [errorStateMatcher]="emailError" (change)="inputChange($event)"  formControlName="userEmail" matInput placeholder="youremail@example.com"  type="email" ngModel email required>
+    </mat-form-field>
+    <mat-error *ngIf="emailError">
+      please enter a valid email address
+    </mat-error>
+    <div class="container-single">
+      <button type="button" mat-raised-button color="primary" (click)="confirm(true)">Confirm</button>
+    </div>
+  </ng-template>
+</ng-template>
 
-  <div class="container-single">
-    <button type="button" mat-raised-button color="primary" (click)="confirm(true)">Confirm</button>
-  </div>
-</ng-template>
-<ng-template [ngIf]="confirmation === true">
-  <h1><b>Good Bye!</b></h1>
-  <p>Your unsubscription has been confirmed</p>
-</ng-template>
 
 

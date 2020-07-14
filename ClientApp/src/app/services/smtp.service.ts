@@ -41,6 +41,8 @@ export class SmtpService {
        + '<p><b>Where:</b> <a href="https://www.digistore24.com/redir/300124/Prithvik/">Secure Your FREE Seat Here</a></p>'
        + '<p>Talk soon,</p>'
        + '<p>Prithvik</p>'
+       + '<br><br>'
+       + '<p>If you no longer wish to receive my email you can unsubscribe <a href="www.six-figures-income-coaching.cf/unsubscribe">here</a></p>'
     }).then(value => {
       Email.send({
         Host: 'smtp.elasticemail.com',
