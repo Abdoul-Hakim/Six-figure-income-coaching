@@ -1,10 +1,6 @@
 [[redirects]]
-  from = "/"
-  to = "/home"
-  status = 200
-
-[[redirects]]
-  from = "/unsubscribe"
-  to = "/unsubscribe"
-  status = 200
+from = "/unsubscribe"
+to = "/unsubscribe"
+status = 200
+force = false
 
