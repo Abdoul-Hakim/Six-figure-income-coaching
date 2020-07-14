@@ -7,15 +7,11 @@ import { HomeComponent } from './home/home.component';
 const routes: Routes = [
   {
     path: 'unsubscribe',
-    component: UnsubscribeComponent
+    component: UnsubscribeComponent,
   },
   {
     path: 'home',
     component: HomeComponent
-  },
-  {
-    path: '**',
-    redirectTo: 'home'
   }
 ];
 
