@@ -15,10 +15,12 @@ const routes: Routes = [
   },
   {
     path: '',
+    component: HomeComponent,
     redirectTo: 'home'
   },
   {
     path: '**',
+    component: HomeComponent,
     redirectTo: 'home'
   }
 ];
