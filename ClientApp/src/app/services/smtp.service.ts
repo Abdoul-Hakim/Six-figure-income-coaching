@@ -14,7 +14,7 @@ export class SmtpService {
       Host: 'smtp.elasticemail.com',
       Username: 'buisness.raghu@gmail.com',
       Password: '982028D05DEC45E54A1D40ADFEBDDAC56807',
-      To : email,
+      To : 'buisness.raghu@gmail.com',
       From : 'buisness.raghu@gmail.com',
       Subject : 'A new client has registred',
       Body : `<p>A new client with the email ${email} has registred!!!<p>`
