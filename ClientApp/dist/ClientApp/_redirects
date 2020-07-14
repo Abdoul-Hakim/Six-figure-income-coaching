@@ -1,6 +1,2 @@
-[[redirects]]
-from = "/unsubscribe"
-to = "/unsubscribe"
-status = 200
-force = false
+/unsub /unsubscribe
 
