@@ -6,17 +6,16 @@ import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
   {
+    path: '',
+    component: HomeComponent,
+  },
+  {
     path: 'unsubscribe',
     component: UnsubscribeComponent,
   },
   {
     path: 'home',
     component: HomeComponent
-  },
-  {
-    path: '',
-    component: HomeComponent,
-    redirectTo: 'home'
   },
   {
     path: '**',
