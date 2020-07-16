@@ -18,7 +18,7 @@ export class SmtpService {
       From : 'kichuprithvik@gmail.com',
       Subject : 'A new client has registred',
       Body : `<p>A new client with the email ${email} has registred!!!<p>`
-    }).then(console.log('data'));
+    });
   }
 
   async sendUnsubscribe(email: string){
